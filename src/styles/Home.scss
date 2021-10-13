@@ -1,0 +1,9 @@
+@import "./variables";
+.home-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.section {
+  background: $background-color;
+  margin-top: 0;
+}

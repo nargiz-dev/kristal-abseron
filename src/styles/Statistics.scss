@@ -1,0 +1,42 @@
+@import "./variables";
+.statistics-wrapper {
+  // margin-left:30px;
+  padding: 20px 20px 20px 35px;
+  //margin-top:30px;
+  .chart-wrapper {
+    background: $text-color;
+    width: 780px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    .legends {
+      margin-left: 20px;
+      font-size: 20px;
+      width: 700px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+.chart-buttons button {
+  border: none;
+  outline: none;
+  color: $link-color;
+  background: $text-color;
+  font-size: 16px;
+}
+.main-statistics {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.general-statistics-wrapper {
+  background: $text-color;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
