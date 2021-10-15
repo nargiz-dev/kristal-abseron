@@ -1,0 +1,46 @@
+@import "./variables";
+.listed-items {
+  ul {
+    list-style-type: none;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 7px;
+    }
+  }
+}
+.statistics-card {
+  width: 48%;
+  background: $text-color;
+  padding: 15px 30px;
+  border-radius: 15px;
+  h4 {
+    font-size: 18px;
+    color: $card-header-color;
+    margin-bottom: 15px;
+  }
+}
+.item-text {
+  p {
+    font-size: 15px;
+    color: $card-header-color;
+    font-weight: bold;
+    margin-right: 40px;
+  }
+}
+.listed-item{
+  .listed-item-info{
+    display: flex;
+    align-items: center;
+  }
+    img{
+        margin-right: 10px;
+    }
+    
+}
+.item-value{
+  font-size: 18px;
+  font-weight: bold;
+  color: $values-color;
+}

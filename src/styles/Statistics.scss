@@ -1,11 +1,10 @@
 @import "./variables";
 .statistics-wrapper {
-  // margin-left:30px;
-  padding: 20px 20px 20px 35px;
-  //margin-top:30px;
+  padding: 20px 20px 10px 35px;
+  height: 90.5vh;
   .chart-wrapper {
     background: $text-color;
-    width: 780px;
+    width: 830px;
     padding: 10px;
     margin-top: 20px;
     border-radius: 15px;
@@ -30,13 +29,45 @@
 .main-statistics {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
 }
 .general-statistics-wrapper {
   background: $text-color;
   margin-left: 30px;
+  border-radius: 15px;
+}
+.additional-statistics {
   display: flex;
   align-items: center;
+  margin-top: 30px;
+  .statistics-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 830px;
+  }
+}
+.bar-chart-wrapper {
+  margin-left: 30px;
+  background: $text-color;
+  border-radius: 15px;
+  padding: 10px;
+}
+.chart-legends {
+  display:flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 30px;
+  align-items: flex-start;
+  padding-left: 10px;
+  .legend-buttons {
+    button {
+      border:none;
+      outline:none;
+      background-color: $text-color;
+      padding: 0;
+      margin-right: 15px;
+      font-size: 12px;
+      color: $legends-color ;
+    }
+  }
 }

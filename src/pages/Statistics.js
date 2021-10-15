@@ -1,6 +1,9 @@
 import React from "react";
+import BanksCard from "../components/BanksCard";
 import Bar from "../components/Bar";
 import GeneralStatistics from "../components/GeneralStatistics";
+import ProjectsCard from "../components/ProjectsCard";
+import LastWeekChart from "../components/LastWeekChart";
 import "../styles/Statistics.scss";
 
 function Statistics() {
@@ -20,6 +23,23 @@ function Statistics() {
         </div>
         <div className="general-statistics-wrapper">
           <GeneralStatistics />
+        </div>
+      </div>
+      <div className="additional-statistics">
+        <div className="statistics-cards">
+          <ProjectsCard />
+          <BanksCard />
+        </div>
+        <div className="bar-chart-wrapper">
+          <div className="chart-legends">
+            <h4>Son həftə</h4>
+            <div className="legend-buttons">
+              <button>Satılıb</button>
+              <button>Kredit</button>
+              <button>İpoteka</button>
+            </div>
+          </div>
+          <LastWeekChart />
         </div>
       </div>
     </div>

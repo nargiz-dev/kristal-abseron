@@ -19,7 +19,7 @@ class Bar extends Component {
         ],
         chart: {
           type: "area",
-          width:800,
+          width:820,
           height: 380,
           stacked: false,
           zoom: {
@@ -49,6 +49,9 @@ class Bar extends Component {
         },
         xaxis:{
           tickPlacement: 'between',
+          axisticks:{
+            show:false,
+          }
         },
 
         labels:
@@ -126,7 +129,7 @@ class Bar extends Component {
           options={this.state.options}
           series={this.state.series}
           type="area"
-          width={750}
+          width={800}
           height={270}
         />
       </div>
