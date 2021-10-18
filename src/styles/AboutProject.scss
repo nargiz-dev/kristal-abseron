@@ -1,0 +1,82 @@
+@import "./variables";
+.about-project-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.about-project {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  background-color: $text-color;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 70vw;
+  z-index: 999999;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 70px 60px;
+  .about-project-text {
+    width: 35vw;
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      color: $paragraph-color;
+      margin-top: 20px;
+      line-height: 23px;
+    }
+  }
+}
+.about-project-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  h2 {
+    font-size: 30px;
+  }
+  .close-button {
+    border: none;
+    background: transparent;
+    text-decoration: underline;
+    color: $primary-color;
+    font-size: 18px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.disabled {
+  display: none;
+}
+.main-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-buildings {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  .buildings-info {
+    display: flex;
+    align-items: center;
+  }
+}
+.info-pictures {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  img{
+      margin-top:10px;
+  }
+}
+.last-text{
+    margin-top: 40px;
+}

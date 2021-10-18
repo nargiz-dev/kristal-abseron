@@ -4,10 +4,14 @@ import Bar from "../components/Bar";
 import GeneralStatistics from "../components/GeneralStatistics";
 import ProjectsCard from "../components/ProjectsCard";
 import LastWeekChart from "../components/LastWeekChart";
+import Header from '../components/Header';
 import "../styles/Statistics.scss";
 
 function Statistics() {
   return (
+    <div>
+    <Header header={"Statistika"} />
+    <div className="section">
     <div className="statistics-wrapper">
       <div className="main-statistics">
         <div className="chart-wrapper">
@@ -42,6 +46,8 @@ function Statistics() {
           <LastWeekChart />
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

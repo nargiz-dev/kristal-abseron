@@ -1,0 +1,29 @@
+@import './variables';
+
+.cards-header{
+    display: flex;
+    align-items: center;
+    .blok-buttons{
+        display: flex;
+        flex-direction: row;
+        background-color: $text-color;
+    }
+}
+
+.search-input{
+    margin:10px 15px;
+    width:300px;
+    input{
+        padding: 10px 35px ;
+        width:100%;
+        border-radius:5px;
+        border:none;
+        outline:none;
+    
+    }
+    i{
+        position:absolute;
+        padding:10px;
+        min-width:40px;
+    }
+}

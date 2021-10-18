@@ -3,11 +3,11 @@ import "../styles/Header.scss";
 import profilePhoto from "../images/profilePhoto.svg";
 import notification from "../images/notification-icon.svg";
 
-function Header() {
+function Header({header}) {
   return (
     <div className="header-wrapper">
       <header className="header">
-        <h2>Statistika</h2>
+        <h2>{header}</h2>
         <div className="profile">
           <img src={notification} />
           <img src={profilePhoto}/>
