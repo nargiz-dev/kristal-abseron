@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import Header from "../components/Header";
 import Statistics from "./Statistics";
 import Buildings from "./Buildings";
@@ -11,8 +11,11 @@ function Home() {
     <div className="home-wrapper">
       <Router>
         <Sidebar />
+        <Switch>
         <Route path="/" exact component={Buildings} />
         <Route path="/statistika" component={Statistics} />
+        <Redirect />
+        </Switch>
       </Router>
     </div>
   );
