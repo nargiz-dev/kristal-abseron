@@ -11,11 +11,8 @@ function Home() {
     <div className="home-wrapper">
       <Router>
         <Sidebar />
-
-            <Route path="/" exact component={Buildings} />
-            <Route path="/statistika" component={Statistics} />
-    
-
+        <Route path="/" exact component={Buildings} />
+        <Route path="/statistika" component={Statistics} />
       </Router>
     </div>
   );

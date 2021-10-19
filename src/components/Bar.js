@@ -12,11 +12,6 @@ class Bar extends Component {
         },
       ],
       options: {
-        series: [
-          {
-            //data:[200, 400, 600, 800,1000]
-          },
-        ],
         chart: {
           type: "area",
           width:820,
@@ -40,10 +35,6 @@ class Bar extends Component {
           width: [2, 4],
         },
 
-        //labels: [200, 300, 400, 500, 600, 800,1000],
-        /* xaxis: {
-          type: 'datetime',
-        },*/
         yaxis: {
           opposite: true,
         },
@@ -51,8 +42,25 @@ class Bar extends Component {
           tickPlacement: 'between',
           axisticks:{
             show:false,
-          }
+          },
+         
+            tooltip: {
+              enabled: false
+            }
+          
         },
+        tooltip: {
+  
+        custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+          return (
+            '<div class="arrow_box">' +
+            "<span>" +
+            series[seriesIndex][dataPointIndex] +
+            "</span>" +
+            "</div>"
+          );
+        },
+      },
 
         labels:
             ["Yanvar",
@@ -70,54 +78,18 @@ class Bar extends Component {
           colors: ["#004AA1", "#3C4FFF69", "#3A4EFF00"],
           type: "gradient",
           gradient: {
-            //shade: 'dark',
             type: "vertical",
             shadeIntensity: 0.3,
-            gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+            gradientToColors: undefined, 
             inverseColors: false,
             opacityFrom: 0.7,
             opacityTo: 0,
             stops: [0, 100, 100, 100],
             colorStops: [],
           },
-          tooltip: {
-            enabled: true,
-            enabledOnSeries: true,
-            shared: true,
-            followCursor: true,
-            intersect: false,
-            inverseOrder: false,
-            custom: undefined,
-            fillSeriesColor: true,
-            theme: false,
-            style: {
-              fontSize: "12px",
-              fontFamily: undefined,
-            },
-            onDatasetHover: {
-              highlightDataSeries: false,
-            },
-            x: {
-              show: true,
-              format: "dd MMM",
-              formatter: undefined,
-            },
-            y: {
-              show: false,
-              formatter: undefined,
-              title: {
-                formatter: (seriesName) => seriesName,
-              },
-            },
-            z: {
-              formatter: undefined,
-              title: "Size: ",
-            },
-          },
+        
         },
-        markers: {
-          discrete: [{ Colors: ["black"], strokeColor: "#ffffff" }],
-        },
+       
       },
     };
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import building from "../images/building.png";
 import img1 from "../images/1otaq.png";
 import img2 from "../images/2otaq.png";
@@ -9,9 +9,23 @@ import img6 from "../images/4otaq.png";
 import "../styles/AboutProject.scss";
 
 function AboutProject({ open, setOpen }) {
+  const myRef = useRef();
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (open && myRef.current && !myRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [open]);
   return (
-    <div className={open ? "about-project-wrapper" : "disabled"}>
-      <div className={open ? "about-project" : "disabled"}>
+    <div className={open ? "about-project-wrapper overlay" : "disabled"}>
+      <div ref={myRef} className={open ? "about-project opened-section" : "disabled"}>
         <div className="about-project-header">
           <h2>Layihə haqqında</h2>
           <button className="close-button" onClick={() => setOpen(!open)}>

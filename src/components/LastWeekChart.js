@@ -63,6 +63,18 @@ class LastWeekChart extends Component {
         dataLabels: {
           enabled: false,
         },
+        tooltip: {
+  
+          custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+            return (
+              '<div class="arrow_box">' +
+              "<span>" +
+              series[seriesIndex][dataPointIndex] +
+              "</span>" +
+              "</div>"
+            );
+          },
+        },
         legend: {
           show: false,
         },

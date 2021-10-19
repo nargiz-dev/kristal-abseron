@@ -1,5 +1,5 @@
 @import "./variables";
-.about-project-wrapper {
+.overlay{
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -8,20 +8,24 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.about-project {
-  display: flex;
+.opened-section{
+    display: flex;
   flex-direction: column;
   position: absolute;
   height: 100vh;
   background-color: $text-color;
   right: 0;
   top: 0;
-  bottom: 0;
-  width: 70vw;
-  z-index: 999999;
+  bottom: 0; 
+   z-index: 999999;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   padding: 70px 60px;
+}
+.about-project {
+
+  width: 70vw;
+
   .about-project-text {
     width: 35vw;
     h4 {

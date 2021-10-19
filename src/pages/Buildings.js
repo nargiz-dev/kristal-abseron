@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Header from "../components/Header";
 import SelectRezidens from "../components/SelectRezidens";
 import circle from "../images/circle.svg";
@@ -6,12 +6,13 @@ import line from "../images/line.svg";
 import CardsHeader from "../components/CardsHeader";
 import "../styles/Buildings.scss";
 import AboutProject from "../components/AboutProject";
+import AddBuilding from "../components/AddBuilding";
 
 function Buildings() {
   const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <AboutProject open={open} setOpen={setOpen} />
       <Header header={"Binalar"} />
       <div className="section">
         <div className="buildings-wrapper">
@@ -19,6 +20,7 @@ function Buildings() {
             <div className="buildings-header">
               <SelectRezidens />
               <button onClick={() => setOpen(!open)}>Layihə haqqında</button>
+              <AboutProject open={open} setOpen={setOpen} />
               <div className="time">
                 <div className="date">
                   <img src={circle} />
@@ -46,10 +48,10 @@ function Buildings() {
           </div>
           <div className="cards-header-wrapper">
             <CardsHeader />
-            <button className="add-new-btn">
-              {" "}
+            <button onClick={() => setIsOpen(!isOpen)} className="add-new-btn">
               <i class="fas fa-plus"></i>Yeni
             </button>
+            <AddBuilding isOpen={isOpen} setIsOpen={setIsOpen}/>
           </div>
         </div>
       </div>
