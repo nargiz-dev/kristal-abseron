@@ -1,5 +1,5 @@
 import React from "react";
-import { banksCard } from "../data/data";
+import { banksCard } from "data/data";
 
 function BanksCard() {
   return (

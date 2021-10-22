@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/SelectRezidens.scss';
+import 'styles/SelectRezidens.scss';
 
 function SelectRezidens() {
   return (
@@ -7,8 +7,8 @@ function SelectRezidens() {
       <div class="select">
         <select>
           <option value="1">İnqilab Rezidens</option>
-          <option value="2">No JS</option>
-          <option value="3">Nice!</option>
+          <option value="2">Neftçilər Rezidens</option>
+          <option value="3">Xırdalan Rezidens</option>
         </select>
       </div>
     </div>

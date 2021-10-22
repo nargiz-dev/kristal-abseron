@@ -1,6 +1,7 @@
 import React from 'react';
-import {projectsCard}  from '../data/data';
-import '../styles/ProjectsBanksCard.scss'
+import {projectsCard}  from 'data/data';
+
+import 'styles/ProjectsBanksCard.scss'
 
 function ProjectsCard() {
     return (

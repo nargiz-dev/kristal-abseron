@@ -1,7 +1,8 @@
 import React from "react";
-import "../styles/Header.scss";
-import profilePhoto from "../images/profilePhoto.svg";
-import notification from "../images/notification-icon.svg";
+import profilePhoto from "images/profilePhoto.svg";
+import notification from "images/notification-icon.svg";
+
+import "styles/Header.scss";
 
 function Header({header}) {
   return (

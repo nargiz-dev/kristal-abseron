@@ -1,11 +1,11 @@
 import React from "react";
-import BanksCard from "../components/BanksCard";
-import Bar from "../components/Bar";
-import GeneralStatistics from "../components/GeneralStatistics";
-import ProjectsCard from "../components/ProjectsCard";
-import LastWeekChart from "../components/LastWeekChart";
-import Header from "../components/Header";
-import "../styles/Statistics.scss";
+import BanksCard from "components/BanksCard";
+import Bar from "components/Bar";
+import GeneralStatistics from "components/GeneralStatistics";
+import ProjectsCard from "components/ProjectsCard";
+import LastWeekChart from "components/LastWeekChart";
+import Header from "components/Header";
+import "styles/Statistics.scss";
 
 function Statistics() {
   return (

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import "../styles/Sidebar.scss";
-import { SidebarData } from "../data/data";
-import logo from "../images/logo.svg";
-import Home from "../pages/Home";
+import { SidebarData } from "data/data";
+import logo from "images/logo.svg";
+import Home from "pages/Home";
+
+import "styles/Sidebar.scss";
 
 function Sidebar() {
   return (
@@ -13,9 +14,9 @@ function Sidebar() {
       </div>
       <div className="sidebar-links">
         <ul>
-          {SidebarData.map((item, index) => {
+          {SidebarData.map((item, key) => {
             return (
-              <li key={index} className={item.cName}>
+              <li key={key} className={item.cName}>
                 <Link className="link" to={item.path}>
                   <img src={item.icon} />
                   <span>{item.title}</span>

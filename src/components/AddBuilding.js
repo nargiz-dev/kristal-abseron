@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "../styles/AddBuilding.scss";
+import "styles/AddBuilding.scss";
 
 function AddBuilding({ isOpen, setIsOpen }) {
   const Ref = useRef();

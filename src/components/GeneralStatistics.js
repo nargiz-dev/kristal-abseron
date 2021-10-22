@@ -1,6 +1,6 @@
 import React from "react";
-import { generalStatistics } from "../data/data";
-import '../styles/GeneralStatistics.scss';
+import { generalStatistics } from "data/data";
+import 'styles/GeneralStatistics.scss';
 function GeneralStatistics() {
   return (
     <div className="general-statistics">

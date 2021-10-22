@@ -1,0 +1,57 @@
+@import './variables';
+.different-color {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .building-category{
+    
+      color:$text-color;
+      padding: 3px 13px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+  }
+  .room-number{
+      display: flex;
+      align-items: center;
+      span{
+          margin-left: 3px;
+      }
+  }
+}
+.cards-wrapper{
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: scroll;
+  height: 64.5vh;
+  padding:0 40px;
+  h3{
+    font-size: 16px;
+    color:#004AA1;
+  }
+}
+.card-container {
+  width: 170px;
+  height: 110px;
+  padding:10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 7px;
+  padding-bottom: 15px ;
+  background-color: $text-color;
+  margin: 10px;
+}
+.card-text p{
+    font-size: 14px;
+    line-height: 17.3px;
+}
+.card-groups{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  h3{
+    transform: rotate(270deg);
+  }
+}

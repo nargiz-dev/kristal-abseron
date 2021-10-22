@@ -1,12 +1,13 @@
 import React, { useRef, useEffect } from "react";
-import building from "../images/building.png";
-import img1 from "../images/1otaq.png";
-import img2 from "../images/2otaq.png";
-import img3 from "../images/2otaq54.png";
-import img4 from "../images/3otaq.png";
-import img5 from "../images/3otaq86.png";
-import img6 from "../images/4otaq.png";
-import "../styles/AboutProject.scss";
+import building from "images/building.png";
+import img1 from "images/1otaq.png";
+import img2 from "images/2otaq.png";
+import img3 from "images/2otaq54.png";
+import img4 from "images/3otaq.png";
+import img5 from "images/3otaq86.png";
+import img6 from "images/4otaq.png";
+
+import "styles/AboutProject.scss";
 
 function AboutProject({ open, setOpen }) {
   const myRef = useRef();

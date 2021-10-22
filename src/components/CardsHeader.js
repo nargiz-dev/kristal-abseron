@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
-import "../styles/CardsHeader.scss";
+
+import "styles/CardsHeader.scss";
 
 function CardsHeader() {
   const buttonTitles = ["Blok A", "Blok B", "Blok C"];
