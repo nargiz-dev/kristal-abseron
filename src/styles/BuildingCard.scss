@@ -1,72 +1,76 @@
-@import './variables';
+@import "./variables";
 .different-color {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  .building-category{
-    
-      color:$text-color;
-      padding: 3px 13px;
-      border-radius: 10px;
-      margin-bottom: 10px;
+  .building-category {
+    color: $text-color;
+    padding: 3px 13px;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
-  .room-number{
-      display: flex;
-      align-items: center;
-      span{
-          margin-left: 3px;
-      }
+  .room-number {
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 3px;
+    }
   }
 }
-.cards-wrapper{
+.cards-wrapper {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   overflow-y: scroll;
   height: 64.5vh;
-  padding:0 40px;
-  h3{
+  padding: 0 40px;
+  h3 {
     font-size: 16px;
-    color:#004AA1;
+    color: #004aa1;
   }
 }
 .card-container {
   width: 170px;
   height: 110px;
-  padding:10px 20px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
 
   border-radius: 7px;
-  padding-bottom: 15px ;
+  padding-bottom: 15px;
   background-color: $text-color;
   margin: 10px;
   position: relative;
+  z-index: 1;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.card-text{
-margin-top:20px;
- p{
+.card-text {
+  margin-top: 20px;
+  p {
     font-size: 14px;
     line-height: 17.3px;
-}}
-.card-groups{
-  width:70vw;
+  }
+}
+.card-groups {
+  width: 70vw;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: nowrap;
   position: relative;
-  h3{
+  h3 {
     transform: rotate(270deg);
     margin-top: 30px;
   }
 }
-.card-wrapper{
-  width:190px;
-  margin:0;
+.card-wrapper {
+  width: 190px;
+  margin: 0;
 }
-.cards-wrapper{
-  width:80vw;
+.cards-wrapper {
+  width: 80vw;
   overflow-x: hidden;
 }

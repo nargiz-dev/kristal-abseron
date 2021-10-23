@@ -12,7 +12,7 @@ import BuildingsCards from "components/BuildingsCards";
 import "styles/Buildings.scss";
 function Buildings() {
   const [open, setOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   return (
     <div>
       <Header header={"Binalar"} />
@@ -50,10 +50,10 @@ function Buildings() {
           </div>
           <div className="cards-header-wrapper">
             <CardsHeader />
-            <button onClick={() => setIsOpen(!isOpen)} className="add-new-btn">
+            <button onClick={() => setIsActive(!isActive)} className="add-new-btn">
               <i class="fas fa-plus"></i>Yeni
             </button>
-            <AddBuilding isOpen={isOpen} setIsOpen={setIsOpen}/>
+            <AddBuilding isActive={isActive} setIsActive={setIsActive}/>
           </div>
         </div><BuildingsCards/>
       </div>
