@@ -36,22 +36,37 @@
   padding:10px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   border-radius: 7px;
   padding-bottom: 15px ;
   background-color: $text-color;
   margin: 10px;
+  position: relative;
 }
-.card-text p{
+
+.card-text{
+margin-top:20px;
+ p{
     font-size: 14px;
     line-height: 17.3px;
-}
+}}
 .card-groups{
+  width:70vw;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  position: relative;
   h3{
     transform: rotate(270deg);
+    margin-top: 30px;
   }
+}
+.card-wrapper{
+  width:190px;
+  margin:0;
+}
+.cards-wrapper{
+  width:80vw;
+  overflow-x: hidden;
 }

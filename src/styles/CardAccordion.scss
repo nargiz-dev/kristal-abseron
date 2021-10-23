@@ -1,0 +1,22 @@
+@import './variables';
+.card-wrapper{
+    display:flex;
+    flex-direction:column ;
+}
+  .card-accordion{
+   
+    width:73vw;
+    position:absolute;
+    height:0;
+    opacity: 0;
+    background-color:$text-color;
+    border-radius: 15px;
+}
+.active-accordion{
+  
+    transform: translateY(-245px);
+    left:27px;
+    right:0;
+    height:240px;
+    opacity: 1;
+}
