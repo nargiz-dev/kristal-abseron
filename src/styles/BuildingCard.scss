@@ -23,7 +23,8 @@
   flex-direction: column;
   overflow-y: scroll;
   height: 64.5vh;
-  padding: 0 40px;
+  padding: 0 20px;
+ 
   h3 {
     font-size: 16px;
     color: #004aa1;
@@ -32,19 +33,27 @@
 .card-container {
   width: 170px;
   height: 110px;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-
-  border-radius: 7px;
-  padding-bottom: 15px;
-  background-color: $text-color;
   margin: 10px;
   position: relative;
   z-index: 1;
   &:hover {
     cursor: pointer;
   }
+}
+.card{
+  width: 170px;
+  height: 110px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  background-color: $text-color;
+  box-shadow: 0px 0px 15px rgba(0, 74, 162, 0.2);
+}
+.active-card{
+  
+  height:360px;
+  transition: linear;
 }
 
 .card-text {
@@ -61,9 +70,13 @@
   align-items: flex-start;
   flex-wrap: nowrap;
   position: relative;
-  h3 {
+  .card-group-name {
+    width: 30px;
+    height:40px;
     transform: rotate(270deg);
     margin-top: 30px;
+    font-size: 14px;
+    color:$primary-color;
   }
 }
 .card-wrapper {
@@ -73,4 +86,15 @@
 .cards-wrapper {
   width: 80vw;
   overflow-x: hidden;
+}
+
+.card-disabled{
+  background-color: $disabled-color !important;
+  color: $primary-color !important;
+  .room-number{
+    display: none ;
+  }
+  .card-text{
+    display:none;
+  }
 }

@@ -13,8 +13,9 @@ import "styles/Buildings.scss";
 function Buildings() {
   const [open, setOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [selected, setSelected] = useState(undefined)
   return (
-    <div>
+    <div className="buildings">
       <Header header={"Binalar"} />
       <div className="section">
         <div className="buildings-wrapper">
@@ -40,22 +41,22 @@ function Buildings() {
             </div>
             <div className="buildings-menu">
               <ul>
-                <li className="card-filter">Bütün mənzillər</li>
-                <li className="card-filter">Satılıb</li>
-                <li className="card-filter">Kredit</li>
-                <li className="card-filter">İpoteka</li>
-                <li className="card-filter">Boş</li>
+                <li className="card-filter"><button onClick={() => setSelected()}>Bütün mənzillər</button></li>
+                <li className="card-filter"><button onClick={() => setSelected("satilib")}>Satılıb</button></li>
+                <li className="card-filter"><button onClick={() => setSelected("kredit")}>Kredit</button></li>
+                <li className="card-filter"><button onClick={() => setSelected("ipoteka")}>İpoteka</button></li>
+                <li className="card-filter"><button onClick={() => setSelected("boş")}>Boş</button></li>
               </ul>
             </div>
           </div>
           <div className="cards-header-wrapper">
-            <CardsHeader />
+            <CardsHeader selected={selected}/>
             <button onClick={() => setIsActive(!isActive)} className="add-new-btn">
               <i class="fas fa-plus"></i>Yeni
             </button>
             <AddBuilding isActive={isActive} setIsActive={setIsActive}/>
           </div>
-        </div><BuildingsCards/>
+        </div><BuildingsCards selected={selected} setSelected={setSelected}/>
       </div>
       
     </div>

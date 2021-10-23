@@ -8,14 +8,32 @@ import CardAccordion from "./CardAccordion";
 import "styles/BuildingCard.scss";
 import BuildingCard from "./BuildingCard";
 
-function BuildingsCards() {
+function BuildingsCards({ selected, setSelected }) {
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
   const Cards = useSelector((state) => state.cardDataReducer.data);
   const grouppedBuildings = _.groupBy(Cards, "mertebe");
-  const sortedKeys = _.keys(grouppedBuildings).sort((a, b) => b - a)
+  const sortedKeys = _.keys(grouppedBuildings).sort((a, b) => b - a);
 
   const [whichOpen, setWhichOpen] = useState(-1);
+  const keySuffix = (key) => {
+    if (
+      key === "11" ||
+      key === "15" ||
+      key === "7" ||
+      key === "8" ||
+      key === "12" ||
+      key === "17"
+    ) {
+      return "-ci";
+    } else if (key === "9" || key === "10") {
+      return "-cu";
+    } else if (key === "13" || key === "14") {
+      return "-cü";
+    } else {
+      return "-cı";
+    }
+  };
 
   useEffect(() => {
     axios
@@ -28,15 +46,14 @@ function BuildingsCards() {
     <div className="cards-wrapper">
       {sortedKeys.map((key) => (
         <div className="card-groups">
-          <h3>{key}</h3>
+          <p className="card-group-name">{key + keySuffix(key)}</p>
           {grouppedBuildings[key].map((building, index) => (
             <div className="wrapper">
               <div className="card-wrapper">
                 <BuildingCard
+                  selected={selected}
                   key={key}
-                  data={data}
                   building={building}
-                  setData={setData}
                   whichOpen={whichOpen}
                   setWhichOpen={setWhichOpen}
                   isOpen={index + key === whichOpen}
@@ -44,17 +61,20 @@ function BuildingsCards() {
                   which={index + key}
                 />
               </div>
-              <CardAccordion
-                key={key}
-                data={data}
-                building={building}
-                setData={setData}
-                whichOpen={whichOpen}
-                setWhichOpen={setWhichOpen}
-                isOpen={index + key === whichOpen}
-                index={index}
-                which={index + key}
-              />
+              {building.kateqoriya === selected || selected === undefined ? (
+                <CardAccordion
+                  key={key}
+                  building={building}
+                  whichOpen={whichOpen}
+                  setWhichOpen={setWhichOpen}
+                  isOpen={index + key === whichOpen}
+                  index={index}
+                  which={index + key}
+                  selected={selected}
+                />
+              ) : (
+                <></>
+              )}
             </div>
           ))}
         </div>
