@@ -85,7 +85,7 @@ function BuildingsCards({ selected, setSelected, isSeries, setIsSeries }) {
           ))}
         </div>
       ) : (
-        <BuildingRows selected={selected}/>
+        <BuildingRows isSeries={isSeries} selected={selected}/>
       )}
     </>
   );

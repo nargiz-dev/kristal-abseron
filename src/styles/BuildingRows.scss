@@ -1,8 +1,69 @@
-@import './variables';
-.building-rows-wrapper{
-    overflow-y: scroll;
-    height:64.5vh;
+@import "./variables";
+.building-rows-wrapper {
+  overflow-y: scroll;
+  height: 64.5vh;
 }
-.building-remove{
-    display:none;
+.building-remove {
+  display: none;
+}
+.table-credit-headers {
+  display: grid;
+  grid-template-columns: repeat(7, 0.7fr);
+  width: 72vw;
+  margin-left: 50px;
+}
+.buildings-info-row {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr 0.8fr 0.8fr 1fr 0.6fr 0.7fr 0.3fr;
+  background-color: $text-color;
+  height: 55px;
+  margin-top: 15px;
+  margin-left: 34px;
+  border-radius: 7px;
+  padding: 15px;
+  width: 74.5vw;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+      cursor: pointer;
+  }
+}
+.sold-table-headers {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 71.5vw;
+  margin-left: 58px;
+}
+.sold-buildings-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: $text-color;
+  height: 55px;
+  margin-top: 15px;
+  margin-left: 34px;
+  border-radius: 7px;
+  padding: 20px;
+  width: 74.5vw;
+  align-items: center;
+  justify-content: center;
+}
+.table-headers {
+  margin-top: 25px;
+  h5 {
+    color: $primary-color;
+  }
+}
+.room {
+  display: flex;
+  align-items: center;
+  img {
+    margin: 0 5px 0 15px;
+  }
+}
+.status{
+    display: flex;
+    align-items: center;
+    img{
+        margin-right:5px;
+    }
 }

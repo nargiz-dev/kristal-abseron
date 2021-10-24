@@ -83,11 +83,8 @@
     i {
       padding: 0 10px;
     }
-    &:hover {
+    &:hover{
       cursor: pointer;
-      background-color: $text-color;
-      color: $primary-color;
-      border: 1px solid $primary-color;
     }
   }
 }

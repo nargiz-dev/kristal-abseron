@@ -1,0 +1,62 @@
+@import './variables';
+.active{
+    height:240px;
+    opacity: 1;
+}
+.close{
+    height:0;
+    opacity:0;
+}
+.info{
+    h5{
+        color:$primary-color;
+    }
+}
+.accordion{
+    width: 74.5vw;
+    align-items: center;
+    justify-content: center;
+    background-color: $text-color;
+    margin-left: 34px;
+    transition: height 0.5s ease-out;
+    margin-top:7px;
+    border-radius: 7px;
+    padding: 15px;
+    .close-icon{
+        margin-right: 40px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .accordion-first-line{
+        width:73vw;
+        display:grid;
+        grid-template-columns: repeat(7,1fr);
+        margin-top:10px;
+        
+    }
+    .accordion-second-line{
+        width:62.5vw;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin-top:30px;
+    }
+    .accordion-end{
+        width:70vw;
+        margin-right: 0;
+        justify-content: space-between;
+        margin-top:40px;
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        .last-section{
+            display:flex;
+            align-items: center;
+            margin-left: 240px;
+            a{
+                font-size: 12px;
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
