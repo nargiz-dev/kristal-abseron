@@ -1,12 +1,13 @@
 @import "./variables";
 .buildings{
+  overflow-y: none;
   position: relative;
 }
 .buildings-header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 25px;
   button {
     padding: 8px 18px;
     background-color: $text-color;
@@ -60,7 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 100px;
+  margin-right: 120px;
   .add-new-btn {
     padding: 10px 20px;
     border-radius: 7px;

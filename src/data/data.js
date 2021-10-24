@@ -17,51 +17,51 @@ import neftciler from "../images/neftciler.png";
 export const SidebarData = [
   {
     title: "Binalar",
-    path: "/",
+    path: "",
     icon: binalar,
     cName: "link-wrapper",
   },
   {
     title: "Müştərilər",
-    path: "/musteriler",
+    path: "musteriler",
     icon: musteriler,
     cName: "link-wrapper",
   },
   {
     title: "İpotekalar",
-    path: "/ipotekalar",
+    path: "ipotekalar",
     icon: ipotekalar,
     cName: "link-wrapper",
   },
   {
     title: "Kreditlər",
-    path: "/kreditler",
+    path: "kreditler",
     icon: ipotekalar,
     cName: "link-wrapper",
   },
   {
     title: "Bildirişlər",
-    path: "/bildirisler",
+    path: "bildirisler",
     icon: bildirisler,
     cName: "link-wrapper",
   },
   {
     title: "Mesajlar",
-    path: "/mesajlar",
+    path: "mesajlar",
     icon: mesajlar,
     cName: "link-wrapper",
   },
 
   {
     title: "Kalendar",
-    path: "/kalendar",
+    path: "kalendar",
     icon: kalendar,
     cName: "link-wrapper",
   },
 
   {
     title: "Statistika",
-    path: "/statistika",
+    path: "statistika",
     icon: statistika,
     cName: "link-wrapper",
   },

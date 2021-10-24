@@ -14,6 +14,12 @@ function Home() {
         <Switch>
         <Route path="/" exact component={Buildings} />
         <Route path="/statistika" component={Statistics} />
+        <Route path="/ipotekalar" component={Buildings}/>
+        <Route path="/musteriler" component={Buildings}/>
+        <Route path="/kreditler" component={Buildings}/>
+        <Route path="/bildirisler" component={Buildings}/>
+        <Route path="/kalendar" component={Buildings}/>
+        <Route path="/mesajlar" component={Buildings}/>
         <Redirect />
         </Switch>
       </Router>

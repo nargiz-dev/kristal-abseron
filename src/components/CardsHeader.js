@@ -17,6 +17,7 @@ function CardsHeader() {
           <Button title={elem} />
         ))}
       </div>
+   
     </div>
   );
 }

@@ -36,7 +36,11 @@
     }
   }
 }
-.clicked{
-  color:black;
-  background-color: brown !important;
+.active-link{
+  background:$text-color;
+  color:darkcyan;
+  .link{
+    
+  }
 }
+

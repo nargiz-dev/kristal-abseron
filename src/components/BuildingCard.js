@@ -37,14 +37,12 @@ function BuildingCard({
         onClick={() => (isOpen ? setWhichOpen(-1) : setWhichOpen(which))}
       >
         <div
-          
           className={
             building.kateqoriya === selected || selected === undefined
               ? "card"
               : "card-disabled card height-fixed"
           }
           style={{ height: isOpen ? "135px" : "110px" }}
-      
         >
           <div className="different-color">
             <div
@@ -79,7 +77,7 @@ function BuildingCard({
               </span>
             </div>
           </div>
-          <div className="card-text" >
+          <div className="card-text">
             <p>
               {building.sahesi}m<sup>2</sup>
             </p>
