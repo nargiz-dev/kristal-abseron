@@ -21,10 +21,8 @@ function Sidebar() {
           {SidebarData.map((item, key) => {
             return (
               <li className={splitLocation[1] === item.path ? "active-link link-wrapper" : item.cName } key={key} >
-                {console.log("/"+ item.path),
-                console.log(splitLocation[1])}
                 <Link className="link" to={"/"+item.path}>
-                  <img src={item.icon} />
+                  <div className="link-icon">{item.icon}</div>
                   <span>{item.title}</span>
                 </Link>
               </li>

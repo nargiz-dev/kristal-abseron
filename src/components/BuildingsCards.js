@@ -4,11 +4,12 @@ import _ from "lodash";
 import { cardData } from "redux/actions/actionCreators";
 import { useDispatch, useSelector } from "react-redux";
 import CardAccordion from "./CardAccordion";
+import BuildingCard from "./BuildingCard";
+import BuildingRows from "./BuildingRows";
 
 import "styles/BuildingCard.scss";
-import BuildingCard from "./BuildingCard";
 
-function BuildingsCards({ selected, setSelected }) {
+function BuildingsCards({ selected, setSelected, isSeries, setIsSeries }) {
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
   const Cards = useSelector((state) => state.cardDataReducer.data);
@@ -43,43 +44,50 @@ function BuildingsCards({ selected, setSelected }) {
   }, [dispatch]);
 
   return (
-    <div className="cards-wrapper">
-      {sortedKeys.map((key) => (
-        <div className="card-groups">
-          <p className="card-group-name">{key + keySuffix(key)}</p>
-          {grouppedBuildings[key].map((building, index) => (
-            <div className="wrapper">
-              <div className="card-wrapper">
-                <BuildingCard
-                  selected={selected}
-                  key={key}
-                  building={building}
-                  whichOpen={whichOpen}
-                  setWhichOpen={setWhichOpen}
-                  isOpen={index + key === whichOpen}
-                  index={index}
-                  which={index + key}
-                />
-              </div>
-              {building.kateqoriya === selected || selected === undefined ? (
-                <CardAccordion
-                  key={key}
-                  building={building}
-                  whichOpen={whichOpen}
-                  setWhichOpen={setWhichOpen}
-                  isOpen={index + key === whichOpen}
-                  index={index}
-                  which={index + key}
-                  selected={selected}
-                />
-              ) : (
-                <></>
-              )}
+    <>
+      {isSeries === "table" || isSeries === undefined || selected ==="boş" ? (
+        <div className="cards-wrapper">
+          {sortedKeys.map((key) => (
+            <div className="card-groups">
+              <p className="card-group-name">{key + keySuffix(key)}</p>
+              {grouppedBuildings[key].map((building, index) => (
+                <div className="wrapper">
+                  <div className="card-wrapper">
+                    <BuildingCard
+                      selected={selected}
+                      key={key}
+                      building={building}
+                      whichOpen={whichOpen}
+                      setWhichOpen={setWhichOpen}
+                      isOpen={index + key === whichOpen}
+                      index={index}
+                      which={index + key}
+                    />
+                  </div>
+                  {building.kateqoriya === selected ||
+                  selected === undefined ? (
+                    <CardAccordion
+                      key={key}
+                      building={building}
+                      whichOpen={whichOpen}
+                      setWhichOpen={setWhichOpen}
+                      isOpen={index + key === whichOpen}
+                      index={index}
+                      which={index + key}
+                      selected={selected}
+                    />
+                  ) : (
+                    <></>
+                  )}
+                </div>
+              ))}
             </div>
           ))}
         </div>
-      ))}
-    </div>
+      ) : (
+        <BuildingRows selected={selected}/>
+      )}
+    </>
   );
 }
 
