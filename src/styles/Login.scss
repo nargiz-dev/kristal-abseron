@@ -1,0 +1,94 @@
+@import "./variables";
+
+.login-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .login-container {
+    margin-left: 110px;
+    margin-top: 90px;
+  }
+}
+.image-wrapper {
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  img {
+    height: 100%;
+  }
+}
+.loginpage-form {
+  margin-top: 100px;
+  h2 {
+    color: $primary-color;
+  }
+  p{
+    margin:15px 0;
+    font-family: "Hyundai-sans-head";
+    span{
+      color:$primary-color;
+      &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+.user-input-wrapper {
+  position: relative;
+  svg {
+    position: absolute;
+    bottom: 25px;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+  }
+  .user-input {
+    border: none;
+    outline: none;
+    background-color: $select-button-color;
+    padding: 0px 45px;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 370px;
+    border-radius: 7px;
+  }
+}
+.login-btn{
+    width: 370px;
+    padding: 0px 45px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    background-color: $primary-color;
+    a{
+      color:$text-color;
+      text-decoration: none;
+      font-weight: bold;
+    }
+}
+.form-end{
+  label{
+    color:$login-text-color;
+  }
+  display:flex;
+  align-items: center;
+  margin-top:10px;
+  justify-content: space-between;
+  p{
+    color:$password-help-color;
+    &:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  
+}
+

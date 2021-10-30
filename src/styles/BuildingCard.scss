@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  height: 64.5vh;
+  height: 63vh;
   padding: 0 20px;
  
   h3 {
@@ -66,9 +66,7 @@
 .card-groups {
   width: 70vw;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  
   position: relative;
   .card-group-name {
     width: 30px;
@@ -78,6 +76,12 @@
     font-size: 14px;
     color:$primary-color;
   }
+}
+.cards-container{
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(6, 1fr);
+  flex-wrap: wrap;
 }
 .card-wrapper {
   width: 190px;
@@ -97,4 +101,38 @@
   .card-text{
     display:none;
   }
+}
+@media only screen and (max-width: 1024px) {
+
+  .cards-wrapper {
+    width: 100vw;
+  }
+  .card-groups{
+    width:80vw;
+  
+  }
+  .cards-container{
+   grid-template-columns: repeat(5, 1fr);
+
+  }
+
+}
+@media only screen and (max-width: 768px) {
+
+  .cards-wrapper {
+    width: 100vw;
+  }
+  .card-groups{
+    width:70vw;
+  
+  }
+  .cards-container{
+   grid-template-columns: repeat(4, 1fr);
+
+  }
+  .card-wrapper {
+    width: 180px;
+    margin: 0;
+  }
+
 }

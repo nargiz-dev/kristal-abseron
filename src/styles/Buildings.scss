@@ -1,7 +1,8 @@
 @import "./variables";
 .buildings{
-  overflow-y: none;
-  position: relative;
+  //overflow-y: none;
+  width:80vw;
+  
 }
 .buildings-header {
   display: flex;
@@ -44,7 +45,6 @@
 }
 .buildings-header-container {
   background: $text-color;
-  padding-bottom: 15px;
   .buildings-menu {
     margin-top: 40px;
     margin-left: 30px;
@@ -60,6 +60,7 @@
     background-color:$text-color;
     border:none;
     font-weight: 500;
+    padding: 10px 2px;
     font-size: 16px;
     &:hover{
       cursor: pointer;
@@ -88,6 +89,30 @@
     }
   }
 }
+.table-card-button{
+  display: flex;
+  align-items: center;
+  background-color: $text-color;
+  border-radius: 10px;
+  .shape-btn{
+    padding:10px 15px;
+    background-color: $text-color;
+    border-radius: 10px;
+    border:none;
+    &:hover{
+        background-color: $primary-color;
+        cursor: pointer;
+        color:$text-color;
+
+    }
+    &:focus{
+        background-color: $primary-color;
+        cursor: pointer;
+        color:$text-color;
+    }
+  }
+}
+
 
 
 

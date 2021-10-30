@@ -11,7 +11,7 @@ import "styles/BuildingRows.scss";
 
 function BuildingRows({ selected, isSeries }) {
   const Cards = useSelector((state) => state.cardDataReducer.data);
-  const [showAccordion, setShowAccordion] = useState(-1);
+  const [showAccordion, setShowAccordion] = useState(false);
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -49,7 +49,7 @@ function BuildingRows({ selected, isSeries }) {
                   className="buildings-info-row"
                   onClick={() =>
                     key === showAccordion
-                      ? setShowAccordion(-1)
+                      ? setShowAccordion(false)
                       : setShowAccordion(key)
                   }
                 >
@@ -77,12 +77,18 @@ function BuildingRows({ selected, isSeries }) {
                       {building.status}
                     </span>
                   </div>
-                  <i class="fas fa-chevron-down"></i>
+                  <i
+                    class="fas fa-chevron-down"
+                    onClick={() =>
+                      key === showAccordion
+                        ? setShowAccordion(false)
+                        : setShowAccordion(key)
+                    }
+                  ></i>
                 </div>
                 <RowAccordion
                   show={key === showAccordion}
                   key={key}
-                  row={key}
                   showAccordion={showAccordion}
                   building={building}
                   setShowAccordion={setShowAccordion}

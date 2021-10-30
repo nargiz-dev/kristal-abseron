@@ -1,6 +1,6 @@
 @import "./variables";
 
-select {
+.select-input {
   //appearance: none;
   outline: 0;
   border: 0;
@@ -14,7 +14,7 @@ select {
   cursor: pointer;
 }
 /* Remove IE arrow */
-select::-ms-expand {
+.select-input::-ms-expand {
   display: none;
 }
 /* Custom Select wrapper */

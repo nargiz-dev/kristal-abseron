@@ -1,5 +1,6 @@
 @import "./variables";
 .header-wrapper {
+  z-index: 1;
   width: 84vw;
   height: 70px;
   background-color: $text-color;
@@ -24,3 +25,27 @@
     flex-direction: column;
   }
 }
+.hamburger-btn{
+  display:none;
+}
+@media only screen and (max-width: 1024px) {
+.header-wrapper{
+width:100vw;
+}
+.hamburger-btn{
+  display:inline;
+  z-index:999999;
+}
+.closed-button{
+  transform: translateX(230px);
+}
+
+}
+@media only screen and (max-width: 768px) {
+  .hamburger-btn{
+    display:inline;
+    z-index:999999;
+  }
+ 
+  }
+

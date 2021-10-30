@@ -1,6 +1,100 @@
-@import './variables';
+@import "./variables";
 
-.add-building{
-    width:55vw;
-    z-index: 9999;
+.add-building {
+  width: 50vw;
+  z-index: 9999;
+  .add-building-header {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      color: $add-header-color;
+      font-size: 28px;
+    }
+  }
 }
+.main-section {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  background-color: $disabled-color;
+  margin-top: 30px;
+  border-radius: 7px;
+  .button {
+    button {
+      width: 90px;
+      font-size: 16px;
+      background-color: $disabled-color;
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+.section-disabled {
+  display: none;
+}
+.form {
+  display: flex;
+  align-items: flex-end;
+  fieldset {
+    height: 50px;
+    width: 310px;
+    border-radius: 7px;
+    border: 1px solid $input-border-color;
+    input {
+      border: none;
+      outline: none;
+    }
+  }
+  .name-input {
+    height: 43px;
+    width: 310px;
+    margin-right: 40px;
+    padding: 0 20px;
+    border-radius: 7px;
+    border: 1px solid $input-border-color;
+  }
+}
+.person-info {
+  margin-top: 35px;
+  h4 {
+    margin-bottom: 10px;
+  }
+}
+.form-submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 7px;
+  margin-top: 35px;
+  border: none;
+  outline: none;
+  color: $text-color;
+  background-color: $primary-color;
+  font-size: 16px;
+}
+.person-info {
+  .inputs {
+      display: flex;
+      justify-content: space-between;
+      input{
+        width: 150px;
+        padding: 10px;
+        border-radius: 7px;
+        outline: none;  
+        border: 1px solid $input-border-color;
+      }
+    select {
+      width: 150px;
+      padding: 10px;
+      border-radius: 7px;
+      outline: none;
+      border: 1px solid $input-border-color;
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .add-building{
+    width:70vw;
+  }
+}
+

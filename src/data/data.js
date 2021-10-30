@@ -10,7 +10,7 @@ import neftciler from "../images/neftciler.png";
 export const SidebarData = [
   {
     title: "Binalar",
-    path: "",
+    path: "binalar",
     icon: (
       <svg
         width="24"

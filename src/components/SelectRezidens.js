@@ -4,8 +4,8 @@ import 'styles/SelectRezidens.scss';
 function SelectRezidens() {
   return (
     <div>
-      <div class="select">
-        <select>
+      <div className="select">
+        <select className="select-input">
           <option value="1">İnqilab Rezidens</option>
           <option value="2">Neftçilər Rezidens</option>
           <option value="3">Xırdalan Rezidens</option>

@@ -6,7 +6,17 @@
         background-color: $text-color;
         border-radius: 10px;
         border:none;
-        
+        &:hover{
+            background-color: $primary-color;
+            cursor: pointer;
+            color:$text-color;
+
+        }
+        &:focus{
+            background-color: $primary-color;
+            cursor: pointer;
+            color:$text-color;
+        }
     }
     
 }

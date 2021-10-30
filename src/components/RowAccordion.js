@@ -2,7 +2,7 @@ import React from "react";
 import group from 'images/group.svg';
 import "styles/RowAccordion.scss";
 
-function RowAccordion({ building, key, show, showAccordion, row , setShowAccordion}) {
+function RowAccordion({ building, key, show, showAccordion , setShowAccordion}) {
   return (
     <div className={show ? "active accordion" : "close"}>
         <div className="close-icon"><i class="fas fa-chevron-up"></i></div>

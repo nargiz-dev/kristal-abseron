@@ -5,6 +5,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  position: static;
   .logo {
     margin-top: 20px;
   }
@@ -75,4 +76,20 @@
     }
 
   }
+}
+@media only screen and (max-width: 1024px) {
+  .sidebar-wrapper{
+    position:absolute;
+    z-index:9999;
+    width:25vw;
+  }
+  .close{
+    display:none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sidebar-wrapper{
+    width:36vw;
+  }
+
 }

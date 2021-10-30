@@ -2,8 +2,22 @@
 .home-wrapper {
   display: flex;
   flex-direction: row;
+  width:100vw;
+  height:100vh;
+  overflow-x: hidden;
+  overflow-y:hidden;
 }
 .section {
   background: $background-color;
   margin-top: 0;
+  width:84vw;
+}
+.right-side-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1024px) {
+ .section{
+   width:100vw;
+ }
 }

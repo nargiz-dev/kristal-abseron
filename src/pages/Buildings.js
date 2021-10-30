@@ -15,6 +15,8 @@ function Buildings() {
   const [isActive, setIsActive] = useState(false);
   const [selected, setSelected] = useState(undefined);
   const [isSeries, setIsSeries] = useState(undefined);
+  const [currentFilter, setCurrentFilter] = useState("all");
+  const [currentShape, setCurrentShape] = useState("cedvel");
 
   const borderColor = (category) => {
     if (category === "kredit") return { borderColor: "#9B51E0" };
@@ -32,10 +34,12 @@ function Buildings() {
   const onClickFuntions = () => {
     setSelected();
     setIsSeries("table");
+    setCurrentFilter("all");
+    setCurrentShape("cedvel");
   };
   return (
     <div className="buildings">
-      <Header header={"Binalar"} />
+    
       <div className="section">
         <div className="buildings-wrapper">
           <div className="buildings-header-container">
@@ -63,54 +67,105 @@ function Buildings() {
                 <li className="card-filter">
                   <button
                     onClick={onClickFuntions}
-                    style={borderColor(selected)}
+                    style={{
+                      borderBottom:
+                        currentFilter === "all" ? "4px solid #004AA1" : "none",
+                        fontWeight:currentFilter==="all" ? "bold" : "normal"
+                    }}
                   >
                     Bütün mənzillər
                   </button>
                 </li>
                 <li className="card-filter">
                   <button
-                    onClick={() => setSelected("satilib")}
-                    style={borderColor(selected)}
+                    onClick={() =>
+                      setSelected("satilib") || setCurrentFilter("satilib")
+                    }
+                    style={{
+                      borderBottom:
+                        currentFilter === "satilib"
+                          ? "4px solid #219653"
+                          : "none",
+                          fontWeight:currentFilter==="satilib" ? "bold" : "normal"
+                    }}
                   >
                     Satılıb
                   </button>
                 </li>
                 <li className="card-filter">
                   <button
-                    onClick={() => setSelected("kredit")}
-                    style={borderColor(selected)}
+                    onClick={() =>
+                      setSelected("kredit") || setCurrentFilter("kredit")
+                    }
+                    style={{
+                      borderBottom:
+                        currentFilter === "kredit"
+                          ? "4px solid #9B51E0"
+                          : "none",
+                          fontWeight:currentFilter==="kredit" ? "bold" : "normal"
+                    }}
                   >
                     Kredit
                   </button>
                 </li>
                 <li className="card-filter">
                   <button
-                    onClick={() => setSelected("ipoteka")}
-                    style={borderColor(selected)}
+                    onClick={() =>
+                      setSelected("ipoteka") || setCurrentFilter("ipoteka")
+                    }
+                    style={{
+                      borderBottom:
+                        currentFilter === "ipoteka"
+                          ? "4px solid #EA8A31"
+                          : "none",
+                          fontWeight:currentFilter==="ipoteka" ? "bold" : "normal"
+                    }}
                   >
                     İpoteka
                   </button>
                 </li>
                 <li className="card-filter">
-                  <button onClick={() => setSelected("boş")}>Boş</button>
+                  <button
+                    onClick={() =>
+                      setSelected("boş") || setCurrentFilter("bos")
+                    }
+                    style={{
+                      borderBottom:
+                        currentFilter === "bos" ? "4px solid #004AA1" : "none",
+                        fontWeight:currentFilter==="bos" ? "bold" : "normal"
+                    }}
+                  >
+                    Boş
+                  </button>
                 </li>
               </ul>
             </div>
           </div>
           <div className="cards-header-wrapper">
             <CardsHeader />
-            {selected !== undefined  ? (
+            {selected !== undefined ? (
               <div className="table-card-button">
                 <button
                   className="card-button shape-btn"
-                  onClick={() => setIsSeries("table")}
+                  onClick={() =>
+                    setIsSeries("table") || setCurrentShape("cedvel")
+                  }
+                  style={{
+                    backgroundColor:
+                      currentShape === "cedvel" ? "#004AA1" : "#ffff",
+                    color: currentShape === "cedvel" ? "#fff" : "black",
+                  }}
                 >
                   Cədvəl
                 </button>
                 <button
                   className="table-button shape-btn"
-                  onClick={() => setIsSeries("row")}
+                  onClick={() => setIsSeries("row") || setCurrentShape("sira")}
+                  style={{
+                    backgroundColor:
+                      currentShape === "sira" ? "#004AA1" : "#ffff",
+                    color: currentShape === "sira" ? "#fff" : "black",
+                  }}
                 >
                   Sıra
                 </button>

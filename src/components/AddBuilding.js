@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import Button from "./Button";
+import Inputs from "./Inputs";
 import "styles/AddBuilding.scss";
 
 function AddBuilding({ isActive, setIsActive }) {
@@ -15,10 +17,14 @@ function AddBuilding({ isActive, setIsActive }) {
     };
   }, [isActive]);
   return (
-    <div className={isActive ? "add-building-wrapper overlay" : "disabled"}>
+    <div
+      className={isActive ? "add-building-wrapper overlay" : "section-disabled"}
+    >
       <div
         ref={Ref}
-        className={isActive ? "add-building opened-section" : "disabled"}
+        className={
+          isActive ? "add-building opened-section" : "section-disabled"
+        }
       >
         <div className="add-building-header">
           <h2>Yeni mənzil əlavə et</h2>
@@ -29,7 +35,46 @@ function AddBuilding({ isActive, setIsActive }) {
             Bağla
           </button>
         </div>
-        <div className="main-section"></div>
+        <div className="main-section">
+          <Button title="Satılıb" />
+          <Button title="Kredit" />
+          <Button title="İpoteka" />
+        </div>
+        <form>
+          <div className="person-info">
+            <h4>Mənzil sahibi</h4>
+            <Inputs />
+          </div>
+          <div className="person-info">
+            <h4>Zamin</h4>
+            <Inputs />
+          </div>
+          <div className="person-info">
+            <h4>Mənzil</h4>
+            <div className="inputs">
+              <select>
+                <option>Mərtəbə</option>
+              </select>
+              <select>
+                <option>Otaq</option>
+              </select>
+              <select>
+                <option>Sahə</option>
+              </select>
+            </div>
+          </div>
+          <div className="person-info">
+            <h4>Məbləğ</h4>
+            <div className="inputs">
+              <input placeholder="İlkin ödəniş"/>
+              <input placeholder="İllik faiz"/>
+              <input placeholder="Müddət"/>
+            </div>
+          </div>
+          <button className="form-submit-btn" type="submit">
+            Tamamla
+          </button>
+        </form>
       </div>
     </div>
   );
