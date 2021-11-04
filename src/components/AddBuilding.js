@@ -1,9 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import Inputs from "./Inputs";
 import "styles/AddBuilding.scss";
 
 function AddBuilding({ isActive, setIsActive }) {
+
+  const [category, buildingCategory] = useState("");
+  const [ownerName, buildingOwnerName] = useState("");
+  const [ownerCode, buildingOwnerCode] = useState("");
+  const [guarantorName, ownerGuarantorName] = useState("");
+  const [guarantorCode, ownerGuarantorCode] = useState("");
+  const [floor, buildingFloor ] = useState("");
+  const [room, roomNumber ] = useState("");
+  const [area, buildingArea ] = useState("");
+
   const Ref = useRef();
   useEffect(() => {
     const checkIfClickedOutside = (e) => {

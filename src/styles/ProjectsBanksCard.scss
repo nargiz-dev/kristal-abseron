@@ -12,6 +12,7 @@
 }
 .statistics-card {
   width: 48%;
+  height:350px;
   background: $text-color;
   padding: 15px 30px;
   border-radius: 15px;
@@ -29,18 +30,37 @@
     margin-right: 40px;
   }
 }
-.listed-item{
-  .listed-item-info{
+.listed-item {
+  .listed-item-info {
     display: flex;
     align-items: center;
   }
-    img{
-        margin-right: 10px;
-    }
-    
+  img {
+    margin-right: 10px;
+  }
 }
-.item-value{
+.item-value {
   font-size: 18px;
   font-weight: bold;
   color: $values-color;
+}
+@media only screen and (max-width: 768px) {
+  .statistics-card {
+    width: 65%;
+
+    padding: 15px 10px;
+    margin-right: 10px;
+
+    h4 {
+      font-size: 16px;
+
+      margin-bottom: 7px;
+    }
+  }
+ 
+  .item-text{
+    small{
+      display: none;
+    }
+  }
 }

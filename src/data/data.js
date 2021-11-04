@@ -276,3 +276,5 @@ export const soldTableHeaders = [
   "1 m  qiyməti",
   "Tarix",
 ];
+
+

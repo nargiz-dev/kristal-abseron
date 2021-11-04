@@ -67,7 +67,7 @@ function AboutProject({ open, setOpen }) {
             </p>
           </div>
           <div className="about-project-image">
-            <img src={building} />
+            <img className="main-image" src={building} />
           </div>
         </div>
       </div>

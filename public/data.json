@@ -49,6 +49,7 @@
     "kateqoriya":"boş",
     "otaqsayi":"1",
     "mertebe":"13",
+    "birmetrqiymeti":"1200AZN",
     "daxilikredit":"var",
     "kreditayliq":"800 AZN",
     "kreditİlkin":"28 500 AZN",
@@ -56,7 +57,7 @@
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
     "ipotekamuddeti":"25 il"
 },
 {
@@ -114,10 +115,11 @@
     "kreditayliq":"800 AZN",
     "kreditİlkin":"28 500 AZN",
     "kreditmuddeti":"10 il",
+    "birmetrqiymeti":"1200AZN",
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
     "ipotekamuddeti":"25 il"
 
 },
@@ -191,13 +193,14 @@
     "otaqsayi":"1",
     "mertebe":"17",
     "daxilikredit":"var",
+    "birmetrqiymeti":"1200AZN",
     "kreditayliq":"800 AZN",
     "kreditİlkin":"28 500 AZN",
     "kreditmuddeti":"10 il",
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
     "ipotekamuddeti":"25 il"
 },
 {
@@ -208,12 +211,13 @@
     "mertebe":"7",
     "daxilikredit":"var",
     "kreditayliq":"800 AZN",
+    "birmetrqiymeti":"1200AZN",
     "kreditİlkin":"28 500 AZN",
     "kreditmuddeti":"10 il",
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
     "ipotekamuddeti":"25 il"
 },
 {  
@@ -271,10 +275,11 @@
     "kreditayliq":"800 AZN",
     "kreditİlkin":"28 500 AZN",
     "kreditmuddeti":"10 il",
+    "birmetrqiymeti":"1200AZN",
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
     "ipotekamuddeti":"25 il"
 },
 {
@@ -307,11 +312,12 @@
     "daxilikredit":"var",
     "kreditayliq":"800 AZN",
     "kreditİlkin":"28 500 AZN",
+    "birmetrqiymeti":"1200AZN",
     "kreditmuddeti":"10 il",
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
     "ipotekamuddeti":"25 il"
 },
 {
@@ -507,7 +513,8 @@
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
+    "birmetrqiymeti":"1200AZN",
     "ipotekamuddeti":"25 il"
 },
 {
@@ -693,7 +700,8 @@
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
+    "birmetrqiymeti":"1200AZN",
     "ipotekamuddeti":"25 il"
 },
 {
@@ -709,7 +717,8 @@
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
+    "birmetrqiymeti":"1200AZN",
     "ipotekamuddeti":"25 il"
 },
 {
@@ -965,13 +974,14 @@
     "otaqsayi":"1",
     "mertebe":"10",
     "daxilikredit":"var",
+    "birmetrqiymeti":"1200AZN",
     "kreditayliq":"800 AZN",
     "kreditİlkin":"28 500 AZN",
     "kreditmuddeti":"10 il",
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
     "ipotekamuddeti":"25 il"
 },
 {
@@ -982,12 +992,13 @@
     "mertebe":"9",
     "daxilikredit":"var",
     "kreditayliq":"800 AZN",
+    "birmetrqiymeti":"1200AZN",
     "kreditİlkin":"28 500 AZN",
     "kreditmuddeti":"10 il",
     "faizderecesi":"12%",
     "ipoteka":"var",
     "ipotekaAyliq":"600 AZN",
-    "ipotekaİilkin":"5000 AZN",
+    "ipotekaİlkin":"5000 AZN",
     "ipotekamuddeti":"25 il"
 }
 ]

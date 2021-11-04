@@ -74,15 +74,38 @@ function Area() {
       },
       responsive: [
         {
-          breakpoint: 550,
+          breakpoint: 2000,
           options: {
-            legend: {
-              position: "bottom",
+            chart: {
+              width:800,
+              height:270,
               horizontalAlign: "center",
               offsetY: 5,
             },
           },
         },
+        {
+          breakpoint: 1025,
+          options: {
+            chart: {
+              width: 650,
+              height:300,
+              horizontalAlign: "center",
+              offsetY: 5,
+            },
+          },
+        },
+        {
+           breakpoint:769,
+           options:{
+             chart:{
+               width:500,
+               height:240,
+               horizontalAlign: "center",
+              offsetY: 4,
+             }
+           }
+        }
       ],
       dataLabels: {
         enabled: true,
@@ -197,11 +220,12 @@ function Area() {
         updateData={updateData}
       />
       <Chart
+      id="chart"
         options={options.options}
         series={options.series}
         type="area"
-        width={800}
-        height={270}
+        
+        
       />
     </div>
   );
