@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 .header-wrapper {
   z-index: 1;
   width: 84vw;
@@ -6,23 +7,17 @@
   background-color: $text-color;
   border-bottom: 1px solid $border-color;
   .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include row-space;
     padding: 12px 30px;
   }
 }
 .profile {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+ @include row;
   img {
     margin-right: 10px;
   }
   .profile-info {
-    display: flex;
-    flex-direction: column;
+@include column;
   }
 }
 .hamburger-btn{

@@ -1,9 +1,7 @@
 @import "./variables";
+@import "./mixins";
 .different-color {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+ @include row-space;
   .building-category {
     color: $text-color;
     padding: 3px 13px;
@@ -11,16 +9,14 @@
     margin-bottom: 10px;
   }
   .room-number {
-    display: flex;
-    align-items: center;
+   @include row;
     span {
       margin-left: 3px;
     }
   }
 }
 .cards-wrapper {
-  display: flex;
-  flex-direction: column;
+  @include column;
   overflow-y: scroll;
   height: 63vh;
   padding: 0 20px;
@@ -41,17 +37,15 @@
   }
 }
 .card{
+   @include column;
   width: 170px;
   height: 110px;
   padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
   border-radius: 7px;
   background-color: $text-color;
   box-shadow: 0px 0px 15px rgba(0, 74, 162, 0.2);
 }
 .active-card{
-  
   height:360px;
   transition: linear;
 }
@@ -64,9 +58,8 @@
   }
 }
 .card-groups {
+  @include row;
   width: 70vw;
-  display: flex;
-  
   position: relative;
   .card-group-name {
     width: 30px;
@@ -81,7 +74,6 @@
   display: grid;
   margin: 0;
   grid-template-columns: repeat(6, 1fr);
-  flex-wrap: wrap;
 }
 .card-wrapper {
   width: 190px;

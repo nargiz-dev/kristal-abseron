@@ -1,11 +1,10 @@
 @import './variables';
+@import './mixins';
 
 .cards-header{
-    display: flex;
-    align-items: center;
+    @include row;
     .blok-buttons{
-        display: flex;
-        flex-direction: row;
+       @include row;
         background-color: $text-color;
         border-radius: 7px;
     }

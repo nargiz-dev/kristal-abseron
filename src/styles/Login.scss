@@ -1,17 +1,15 @@
 @import "./variables";
+@import "./mixins";
 
 .login-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+@include row-space;
   .login-container {
     margin-left: 110px;
-    margin-top: 90px;
+    margin-top: 10px;
   }
 }
 .image-wrapper {
   height: 100vh;
-
   margin: 0;
   padding: 0;
 
@@ -55,6 +53,10 @@
     margin-bottom: 10px;
     width: 370px;
     border-radius: 7px;
+    &:focus{
+      border: 2px solid $primary-color;
+      
+    }
   }
 }
 .login-btn{
@@ -71,15 +73,24 @@
       text-decoration: none;
       font-weight: bold;
     }
+    &:hover{
+     background-color: $text-color;
+     border: 2px solid $primary-color;
+     cursor: pointer;
+     a{
+      color:$primary-color;
+     }
+    }
 }
 .form-end{
+  @include row-space;
+  margin-top:10px;
   label{
     color:$login-text-color;
   }
-  display:flex;
-  align-items: center;
-  margin-top:10px;
-  justify-content: space-between;
+  
+  
+ 
   p{
     color:$password-help-color;
     &:hover{

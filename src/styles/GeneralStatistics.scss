@@ -1,17 +1,17 @@
 @import "./variables";
+@import "./mixins";
+
 .general-statistics {
   height: 330px;
   width:250px;
   padding-left: 23px;
   padding-top:20px;
-  display: flex;
-  flex-direction: column;
+ @include column-center;
   align-items: flex-start;
-  justify-content: center;
+  
 
   ul {
-    display: flex;
-    flex-direction: column;
+    @include column;
     align-items: flex-start;
     justify-content: flex-start;
 

@@ -1,11 +1,11 @@
 @import "./variables";
+@import "./mixins";
+
 .listed-items {
   ul {
     list-style-type: none;
     li {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include row-space;
       margin-top: 7px;
     }
   }
@@ -32,8 +32,7 @@
 }
 .listed-item {
   .listed-item-info {
-    display: flex;
-    align-items: center;
+    @include row;
   }
   img {
     margin-right: 10px;
@@ -47,17 +46,14 @@
 @media only screen and (max-width: 768px) {
   .statistics-card {
     width: 65%;
-
     padding: 15px 10px;
     margin-right: 10px;
 
     h4 {
       font-size: 16px;
-
       margin-bottom: 7px;
     }
   }
- 
   .item-text{
     small{
       display: none;

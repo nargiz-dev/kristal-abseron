@@ -44,6 +44,7 @@ function Home() {
             headerTitle={headerTitle}
             setHeaderTitle={setHeaderTitle}
           />
+          
           <div className="right-side-wrapper">
             <Header
               sidebarOpen={sidebarOpen}

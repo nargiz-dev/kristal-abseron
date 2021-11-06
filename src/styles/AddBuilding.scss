@@ -1,11 +1,11 @@
 @import "./variables";
+@import './mixins';
 
 .add-building {
   width: 50vw;
   z-index: 9999;
   .add-building-header {
-    display: flex;
-    justify-content: space-between;
+    @include row-space;
     h2 {
       color: $add-header-color;
       font-size: 28px;
@@ -14,8 +14,7 @@
 }
 .main-section {
   width: 200px;
-  display: flex;
-  align-items: center;
+ @include row;
   background-color: $disabled-color;
   margin-top: 30px;
   border-radius: 7px;
@@ -34,16 +33,18 @@
   display: none;
 }
 .form {
-  display: flex;
+  display:flex;
   align-items: flex-end;
   fieldset {
     height: 50px;
     width: 310px;
     border-radius: 7px;
     border: 1px solid $input-border-color;
+    
     input {
       border: none;
       outline: none;
+      
     }
   }
   .name-input {
@@ -53,6 +54,10 @@
     padding: 0 20px;
     border-radius: 7px;
     border: 1px solid $input-border-color;
+    outline: none;
+    &:focus{
+      border:2px solid $primary-color;
+    }
   }
 }
 .person-info {
@@ -74,14 +79,16 @@
 }
 .person-info {
   .inputs {
-      display: flex;
-      justify-content: space-between;
+    @include row-space;
       input{
         width: 150px;
         padding: 10px;
         border-radius: 7px;
         outline: none;  
         border: 1px solid $input-border-color;
+        &:focus{
+          border:2px solid $primary-color;
+        }
       }
     select {
       width: 150px;
@@ -89,6 +96,12 @@
       border-radius: 7px;
       outline: none;
       border: 1px solid $input-border-color;
+      &:focus{
+        border:2px solid $primary-color;
+      }
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 }

@@ -1,17 +1,16 @@
 @import "./variables";
+@import "./mixins";
 .overlay {
   width: 100vw;
   height: 100vh;
   position: absolute;
   right: 0;
-  
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 .opened-section {
-  display: flex;
-  flex-direction: column;
+ @include column;
   position: absolute;
  height: 100vh;
   background-color: $text-color;
@@ -22,8 +21,6 @@
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   padding: 70px 60px;
-  
-  
 }
 .about-project {
   width: 60vw;
@@ -42,8 +39,7 @@
   }
 }
 .about-project-header {
-  display: flex;
-  justify-content: space-between;
+  @include row-space;
   margin-bottom: 25px;
   h2 {
     font-size: 30px;
@@ -60,29 +56,23 @@
   }
 }
 .disabled {
-
   height:0;
   opacity: 0;
   width:0;
   display: none;
 }
 .main-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+@include row-space;
 }
 .about-buildings {
   margin-top: 40px;
   margin-bottom: 80px;
   .buildings-info {
-    display: flex;
-    align-items: center;
+    @include row;
   }
 }
 .info-pictures {
-  display: flex;
-  flex-direction: column;
+ @include column;
   margin-right: 20px;
   img {
     margin-top: 10px;

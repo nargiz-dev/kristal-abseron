@@ -1,7 +1,7 @@
 @import "./variables";
+@import "./mixins";
 .card-wrapper {
-  display: flex;
-  flex-direction: column;
+  @include column;
 }
 .card-accordion {
   width: 73vw;

@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 .building-rows-wrapper {
   overflow-y: scroll;
   height: 64.5vh;
@@ -54,15 +55,13 @@
   }
 }
 .room {
-  display: flex;
-  align-items: center;
+  @include row;
   img {
     margin: 0 5px 0 15px;
   }
 }
 .status{
-    display: flex;
-    align-items: center;
+  @include row;
     img{
         margin-right:5px;
     }
@@ -76,9 +75,7 @@
   .buildings-info-row {
     grid-template-columns: 1.2fr 0.7fr 0.8fr 0.8fr 1fr 0.6fr 0.7fr 0.3fr;
     margin-left: 40px;
-
     width: 89vw;
-
   }
   .sold-table-headers {
 
