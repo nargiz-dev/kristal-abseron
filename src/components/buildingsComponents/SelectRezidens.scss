@@ -1,0 +1,36 @@
+@import "styles/variables";
+
+.select-input {
+  //appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: $select-text-color;
+  background-color: $select-button-color;
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+.select-input::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  //position: relative;
+  display: flex;
+  width: 18em;
+  height: 2.3em;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 0 15px;
+}
+/* Arrow */
+
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+

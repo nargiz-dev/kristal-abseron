@@ -1,9 +1,9 @@
 import React, {Suspense} from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "pages/Login";
+import Login from "pages/Login/Login";
 
 
-const Home = React.lazy(() => import('pages/Home'));
+const Home = React.lazy(() => import('pages/Home/Home'));
 
 function App() {
   return (

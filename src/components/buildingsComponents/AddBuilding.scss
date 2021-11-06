@@ -1,0 +1,113 @@
+@import "styles/variables";
+@import 'styles/mixins';
+
+.add-building {
+  width: 50vw;
+  z-index: 9999;
+  .add-building-header {
+    @include row-space;
+    h2 {
+      color: $add-header-color;
+      font-size: 28px;
+    }
+  }
+}
+.main-section {
+  width: 200px;
+ @include row;
+  background-color: $disabled-color;
+  margin-top: 30px;
+  border-radius: 7px;
+  .button {
+    button {
+      width: 90px;
+      font-size: 16px;
+      background-color: $disabled-color;
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+.section-disabled {
+  display: none;
+}
+.form {
+  display:flex;
+  align-items: flex-end;
+  fieldset {
+    height: 50px;
+    width: 310px;
+    border-radius: 7px;
+    border: 1px solid $input-border-color;
+    
+    input {
+      border: none;
+      outline: none;
+      
+    }
+  }
+  .name-input {
+    height: 43px;
+    width: 310px;
+    margin-right: 40px;
+    padding: 0 20px;
+    border-radius: 7px;
+    border: 1px solid $input-border-color;
+    outline: none;
+    &:focus{
+      border:2px solid $primary-color;
+    }
+  }
+}
+.person-info {
+  margin-top: 35px;
+  h4 {
+    margin-bottom: 10px;
+  }
+}
+.form-submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 7px;
+  margin-top: 35px;
+  border: none;
+  outline: none;
+  color: $text-color;
+  background-color: $primary-color;
+  font-size: 16px;
+}
+.person-info {
+  .inputs {
+    @include row-space;
+      input{
+        width: 150px;
+        padding: 10px;
+        border-radius: 7px;
+        outline: none;  
+        border: 1px solid $input-border-color;
+        &:focus{
+          border:2px solid $primary-color;
+        }
+      }
+    select {
+      width: 150px;
+      padding: 10px;
+      border-radius: 7px;
+      outline: none;
+      border: 1px solid $input-border-color;
+      &:focus{
+        border:2px solid $primary-color;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .add-building{
+    width:100vw;
+  }
+}
+

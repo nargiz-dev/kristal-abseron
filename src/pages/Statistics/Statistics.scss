@@ -1,0 +1,138 @@
+@import "styles/variables";
+@import "styles/mixins";
+.statistics-wrapper {
+  padding: 20px 20px 10px 35px;
+  height: 90.5vh;
+  .chart-wrapper {
+    background: $text-color;
+    width: 830px;
+    padding: 10px;
+    margin-top: 0px;
+    border-radius: 15px;
+    .legends {
+      margin-left: 20px;
+      font-size: 20px;
+      width: 700px;
+@include row-space;
+    }
+  }
+}
+.chart-buttons button {
+  border: none;
+  outline: none;
+  color: $link-color;
+  background: $text-color;
+  font-size: 16px;
+}
+.main-statistics {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.general-statistics-wrapper {
+  background: $text-color;
+  margin-left: 30px;
+  border-radius: 15px;
+}
+.additional-statistics {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  .statistics-cards {
+    @include row-space;
+    width: 830px;
+  }
+}
+.bar-chart-wrapper {
+  margin-left: 30px;
+  background: $text-color;
+  border-radius: 15px;
+  padding: 10px;
+}
+.chart-legends {
+@includer row;
+  align-items: flex-start;
+  padding-left: 10px;
+  .legend-buttons {
+    button {
+      border: none;
+      outline: none;
+      background-color: $text-color;
+      padding: 0px;
+      color: $legends-color;
+      font-size: 13px;
+      margin-right: 15px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.sales {
+@include row-space;
+  padding: 0 20px;
+}
+.area-chart-title {
+  button {
+    border: none;
+    outline: none;
+    background-color: $text-color;
+    padding: 10px;
+    margin-left: 40px;
+    font-size: 14px;
+    color: $link-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .active-time {
+    border-bottom: 4px solid $primary-color;
+    color: $primary-color;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .statistics-wrapper {
+    padding: 15px 10px 10px 10px;
+    height: 90.5vh;
+    .chart-wrapper {
+      background: $text-color;
+      width: 830px;
+      height: 300px;
+      padding: 30px 0;
+      .legends {
+        margin-left: 0px;
+        font-size: 20px;
+        width: 500px;
+      }
+    }
+  }
+  .area-chart-title {
+    button {
+      padding: 0px;
+      margin-left: 20px;
+    }
+  }
+  .general-statistics-wrapper {
+    margin-left: 15px;
+    .general-statistics{
+      width:220px;
+      padding-left: 20px;
+    }
+  }
+  .additional-statistics{ 
+    margin-top:10px;
+    .statistics-cards {
+    justify-content: center;
+ 
+  }}
+  .bar-chart-wrapper {
+    margin-left: 0px;
+  }
+  .general-statistics {
+    height: 300px;
+  }
+  .statistics-card{
+    height:270px;
+  }
+}
