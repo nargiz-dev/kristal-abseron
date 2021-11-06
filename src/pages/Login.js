@@ -8,7 +8,7 @@ function Login() {
   return (
     <div className="login-wrapper">
       <div className="login-container">
-        <img src={loginLogo} />
+        <img src={loginLogo} alt="login-logo"/>
         <div className="loginpage-form">
           <h2>Giriş</h2>
           <p>
@@ -79,7 +79,7 @@ function Login() {
         </div>
       </div>
       <div className="image-wrapper">
-        <img src={loginImage} />
+        <img src={loginImage} alt="login-image"/>
       </div>
     </div>
   );

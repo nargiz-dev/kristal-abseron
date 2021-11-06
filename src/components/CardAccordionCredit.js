@@ -1,7 +1,6 @@
 import React from "react";
 import group from "images/group.svg";
 import room from "images/room.svg";
-import RowAccordion from "./RowAccordion";
 
 function CardAccordionCredit({ building }) {
   return (
@@ -22,7 +21,7 @@ function CardAccordionCredit({ building }) {
           <div className="info">
             <h5>Otaq sayı</h5>
             <div className="row-element room">
-              <img src={room} />
+              <img src={room} alt="room"/>
               {building.otaqsayi}
             </div>
           </div>
@@ -71,7 +70,7 @@ function CardAccordionCredit({ building }) {
         </div>
         <div className="accordion-end">
           <div className="last-section">
-            <img src={group} /> <a>Daha çox</a>
+            <img src={group} alt="accordion-end"/> <a>Daha çox</a>
           </div>
           <div className="last-section-btn">
             <button>bildiriş göndər</button>

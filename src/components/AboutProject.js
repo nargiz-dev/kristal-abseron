@@ -51,14 +51,14 @@ function AboutProject({ open, setOpen }) {
               <h4>Mənzillər</h4>
               <div className="buildings-info">
                 <div className="info-pictures">
-                  <img src={img6} />
-                  <img src={img5} />
-                  <img src={img4} />
-                  <img src={img3} />
+                  <img src={img6} alt="buildings-info"/>
+                  <img src={img5} alt="buildings-info"/>
+                  <img src={img4} alt="buildings-info"/>
+                  <img src={img3} alt="buildings-info"/>
                 </div>
                 <div className="info-pictures">
-                  <img src={img2} />
-                  <img src={img1} />
+                  <img src={img2} alt="buildings-info"/>
+                  <img src={img1} alt="buildings-info"/>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@ function AboutProject({ open, setOpen }) {
             </p>
           </div>
           <div className="about-project-image">
-            <img className="main-image" src={building} />
+            <img className="main-image" src={building} alt="building" />
           </div>
         </div>
       </div>

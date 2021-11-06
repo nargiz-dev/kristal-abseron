@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import Header from "components/Header";
+import React, { useState} from "react";
 import SelectRezidens from "components/SelectRezidens";
-import circle from "images/circle.svg";
-import line from "images/line.svg";
 import CardsHeader from "components/CardsHeader";
-import { cardData } from "redux/actions/actionCreators";
 import AboutProject from "components/AboutProject";
 import AddBuilding from "components/AddBuilding";
 import BuildingsCards from "components/BuildingsCards";
+
+import circle from "images/circle.svg";
+import line from "images/line.svg";
 import "styles/Buildings.scss";
 
 function Buildings() {
@@ -49,15 +48,15 @@ function Buildings() {
               <AboutProject open={open} setOpen={setOpen} />
               <div className="time">
                 <div className="date">
-                  <img src={circle} />
+                  <img src={circle} alt="circle"/>
                   <p>17.09.2019</p>
                 </div>
-                <div className="line">
-                  <img src={line} />
+                <div className="line" >
+                  <img src={line}  alt="line"/>
                 </div>
 
                 <div className="date">
-                  <img src={circle} />
+                  <img src={circle} alt="circle"/>
                   <p>davam edir</p>
                 </div>
               </div>

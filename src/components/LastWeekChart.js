@@ -46,22 +46,9 @@ function LastWeekChart() {
           },
         ],
       },
-      xaxis: {
-        axisBorder: {
-          show: false,
-        },
-        axisTicks: {
-          show: false,
-        },
-      },
+   
       grid: {
         yaxis: {
-          lines: {
-            show: false,
-            startonly: false,
-          },
-        },
-        xaxis: {
           lines: {
             show: false,
             startonly: false,
@@ -119,6 +106,10 @@ function LastWeekChart() {
             fontSize: "12px",
           },
         },
+          lines: {
+            show: false,
+            startonly: false,
+          },
       },
     },
   });

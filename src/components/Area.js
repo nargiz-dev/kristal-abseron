@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 import ApexCharts from "apexcharts";
 import { useDispatch, useSelector } from "react-redux";

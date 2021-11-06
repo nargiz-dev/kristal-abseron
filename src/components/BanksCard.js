@@ -11,7 +11,7 @@ function BanksCard() {
             return (
               <li className="listed-item" key={index}>
                 <div className="listed-item-info">
-                <img src={item.icon} />
+                <img src={item.icon} alt="bank-logo"/>
                 <div className="item-text">
                   <p>{item.text}</p>
                 </div></div>

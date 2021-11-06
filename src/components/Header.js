@@ -24,8 +24,8 @@ function Header({ header, sidebarOpen, setSidebarOpen }) {
 
         <h2>{header}</h2>
         <div className="profile">
-          <img src={notification} />
-          <img src={profilePhoto} />
+          <img src={notification} alt="notification-icon"/>
+          <img src={profilePhoto} alt="profile-photo"/>
           <div className="profile-info">
             <h5>Əhməd Əliyev</h5>
             <p>Satış meneceri</p>

@@ -14,7 +14,7 @@ function CardAccordionEmpty({building}) {
         <div className="info">
           <h5>Otaq sayı</h5>
           <div className="row-element room">
-                  <img src={room} />
+                  <img src={room} alt="room-number"/>
                   {building.otaqsayi}
                 </div>
         </div>

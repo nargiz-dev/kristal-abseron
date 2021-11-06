@@ -3,24 +3,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  Redirect,
 } from "react-router-dom";
-import { useLocation } from "react-router";
 import Header from "components/Header";
-
-import Buildings from "./Buildings";
 import Sidebar from "components/Sidebar";
 import "styles/Home.scss";
+
 const Statistics = React.lazy(() => import("pages/Statistics"));
+const Buildings = React.lazy(() => import('pages/Buildings'));
+
 function Home() {
-  const width = window.innerWidth;
-
-  const breakpoint = 1024;
-
-  const location = useLocation();
-  const { pathname } = location;
-  const splitLocation = pathname.split("/");
   const [headerTitle, setHeaderTitle] = useState("home");
   const [sidebarOpen, setSidebarOpen] = useState(true);
 

@@ -13,7 +13,7 @@ function ProjectsCard() {
                 return(
                     <li className="listed-item" key={index} >
                         <div className="listed-item-info">
-                        <img src={item.icon} />
+                        <img src={item.icon} alt="building-icon"/>
                         <div className="item-text">
                         <p>{item.title}</p>
                         <small>{item.text}</small>

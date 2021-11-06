@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import { SidebarData } from "data/data";
 import logo from "images/logo.svg";
-import Home from "pages/Home";
 
 import "styles/Sidebar.scss";
 
@@ -15,7 +14,7 @@ function Sidebar({ headerTitle, setHeaderTitle, sidebarOpen, setSidebarOpen }) {
   return (
     <div className={sidebarOpen ? "sidebar-wrapper " : "sidebar-wrapper close"}>
       <div className="logo">
-        <img src={logo} />
+        <img src={logo} alt="kristal-abseron-logo"/>
       </div>
       <div className="sidebar-links">
         <ul>

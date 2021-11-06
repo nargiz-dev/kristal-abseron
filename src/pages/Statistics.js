@@ -4,7 +4,6 @@ import Area from "components/Area";
 import GeneralStatistics from "components/GeneralStatistics";
 import ProjectsCard from "components/ProjectsCard";
 import LastWeekChart from "components/LastWeekChart";
-import Header from "components/Header";
 import "styles/Statistics.scss";
 
 function Statistics() {

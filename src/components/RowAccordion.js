@@ -63,7 +63,7 @@ function RowAccordion({ building, key, show, showAccordion , setShowAccordion}) 
         </div>
       </div>
       <div className="accordion-end">
-          <div className="last-section"><img src={group}/> <a>Daha çox</a></div>
+          <div className="last-section"><img src={group} alt="accordion-end"/> <a>Daha çox</a></div>
           <div className="last-section-btn"><button>bildiriş göndər</button></div>
       </div>
     </div>

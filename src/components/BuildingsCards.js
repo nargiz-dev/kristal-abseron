@@ -10,7 +10,6 @@ import BuildingRows from "./BuildingRows";
 import "styles/BuildingCard.scss";
 
 function BuildingsCards({ selected, setSelected, isSeries, setIsSeries }) {
-  const [data, setData] = useState([]);
   const dispatch = useDispatch();
   const Cards = useSelector((state) => state.cardDataReducer.data);
   const grouppedBuildings = _.groupBy(Cards, "mertebe");

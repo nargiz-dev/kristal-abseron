@@ -1,6 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import CardAccordion from "./CardAccordion";
+import React from "react";
 
 function BuildingCard({
   selected,

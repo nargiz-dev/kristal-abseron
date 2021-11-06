@@ -12,7 +12,6 @@ import "styles/BuildingRows.scss";
 function BuildingRows({ selected, isSeries }) {
   const Cards = useSelector((state) => state.cardDataReducer.data);
   const [showAccordion, setShowAccordion] = useState(false);
-  const [data, setData] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
     axios
@@ -58,14 +57,14 @@ function BuildingRows({ selected, isSeries }) {
                     {building.sahesi} m<sup>2</sup>
                   </div>
                   <div className="row-element room">
-                    <img src={room} />
+                    <img src={room} alt="room-number"/>
                     {building.otaqsayi}
                   </div>
                   <div className="row-element">{building.ayliqodenis}</div>
                   <div className="row-element">{building.ilkinodenis}</div>
                   <div className="row-element">{building.mertebe}</div>
                   <div className="row-element status">
-                    <img src={building.status === "ödənilib" ? right : wrong} />
+                    <img src={building.status === "ödənilib" ? right : wrong}  alt="building-status"/>
                     <span
                       style={{
                         color:
@@ -101,7 +100,7 @@ function BuildingRows({ selected, isSeries }) {
                   {building.sahesi}m<sup>2</sup>
                 </div>
                 <div className="row-element room">
-                  <img src={room} />
+                  <img src={room} alt="room-number"/>
                   {building.otaqsayi}
                 </div>
                 <div className="row-element">{building.qiymeti}</div>
