@@ -57,3 +57,19 @@ margin-top:40px;
 }
 
 }
+.send-notification-btn{
+    background-color:$text-color;
+    color:$primary-color;
+    border:1px solid $primary-color;
+    border-radius:7px;
+    padding:5px 10px;
+    outline:none;
+    &:hover{
+        background-color:$primary-color;
+        color:$text-color;
+        cursor:pointer;
+    }
+}
+.more-btn{
+    margin-left:20px;
+}

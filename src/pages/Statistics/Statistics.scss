@@ -90,6 +90,19 @@
     color: $primary-color;
   }
 }
+.arrow_box{
+  background-color:$primary-color;
+  color:$text-color;
+  padding: 3px 20px;
+  border:none;
+  outline:none;
+
+}
+.arrow-box{
+  background-color:$mortgage-color;
+  color:$text-color;
+  padding: 3px 15px;
+}
 
 @media only screen and (max-width: 768px) {
   .statistics-wrapper {

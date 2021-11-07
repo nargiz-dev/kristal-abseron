@@ -76,7 +76,7 @@ function LastWeekChart() {
       tooltip: {
         custom: function ({ series, seriesIndex, dataPointIndex, w }) {
           return (
-            '<div class="arrow_box">' +
+            '<div class="arrow-box">' +
             "<span>" +
             series[seriesIndex][dataPointIndex] +
             "</span>" +

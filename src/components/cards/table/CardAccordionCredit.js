@@ -70,10 +70,10 @@ function CardAccordionCredit({ building }) {
         </div>
         <div className="accordion-end">
           <div className="last-section">
-            <img src={group} alt="accordion-end"/> <a>Daha çox</a>
+            <img src={group} alt="accordion-end"/> <a className="more-btn">Daha çox</a>
           </div>
           <div className="last-section-btn">
-            <button>bildiriş göndər</button>
+            <button className='send-notification-btn'>bildiriş göndər</button>
           </div>
         </div>
       </div>

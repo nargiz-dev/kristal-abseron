@@ -32,6 +32,7 @@ function BuildingCard({
     <>
       <div
         className={isOpen ? "active-card card-container" : "card-container"}
+        style={{height: isOpen && building.kateqoriya === "satilib" ? "200px" : ""}}
         onClick={() => (isOpen ? setWhichOpen(-1) : setWhichOpen(which))}
       >
         <div

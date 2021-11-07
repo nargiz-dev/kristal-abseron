@@ -143,7 +143,7 @@ function Area() {
             '<div class="arrow_box">' +
             "<span>" +
             series[seriesIndex][dataPointIndex] +
-            "</span>" +
+            "</span>" +"K"+
             "</div>"
           );
         },
