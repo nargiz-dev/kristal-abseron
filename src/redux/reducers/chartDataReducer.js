@@ -1,4 +1,4 @@
-import { AREA_CHART_DATA, AREA_FILTER } from "redux/actionTypes";
+import { AREA_CHART_DATA, AREA_FILTER, ADD_BUILDING } from "redux/actionTypes";
 
 const initialState = {
   data: [],

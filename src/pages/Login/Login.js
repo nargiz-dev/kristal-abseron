@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import loginImage from "images/loginImage.png";
 import loginLogo from "images/loginLogo.png";
+
 import "./Login.scss";
 
 function Login() {

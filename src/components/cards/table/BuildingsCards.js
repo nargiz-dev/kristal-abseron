@@ -10,10 +10,12 @@ import BuildingRows from "../series/BuildingRows";
 import "./BuildingsCards.scss";
 
 function BuildingsCards({ selected, setSelected, isSeries, setIsSeries }) {
+  
   const dispatch = useDispatch();
   const Cards = useSelector((state) => state.cardDataReducer.data);
   const grouppedBuildings = _.groupBy(Cards, "mertebe");
-  const sortedKeys = _.keys(grouppedBuildings).sort((a, b) => b - a);
+  const sortedKeys = _.keys(grouppedBuildings).sort((a, b) => b - a); 
+  const url = 'http://localhost:8080/buildings';
 
   const [whichOpen, setWhichOpen] = useState(-1);
   const keySuffix = (key) => {
@@ -37,7 +39,7 @@ function BuildingsCards({ selected, setSelected, isSeries, setIsSeries }) {
 
   useEffect(() => {
     axios
-      .get("/data.json")
+      .get(url)
       .then((res) => dispatch(cardData(res.data)))
       .catch((err) => console.log(err));
   }, [dispatch]);

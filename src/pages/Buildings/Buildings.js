@@ -4,6 +4,7 @@ import CardsHeader from "components/cards/CardsHeader";
 import AboutProject from "components/buildingsComponents/AboutProject";
 import AddBuilding from "components/buildingsComponents/AddBuilding";
 import BuildingsCards from "components/cards/table/BuildingsCards";
+import ReactLoading from "react-loading";
 
 import circle from "images/circle.svg";
 import line from "images/line.svg";

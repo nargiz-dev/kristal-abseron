@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import Header from "components/homeComponents/Header";
 import Sidebar from "components/homeComponents/Sidebar";
+
+import ReactLoading from "react-loading";
 import "pages/Home/Home.scss";
 
 const Statistics = React.lazy(() => import("pages/Statistics/Statistics"));
@@ -27,7 +29,7 @@ function Home() {
 
   return (
     <div className="home-wrapper">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className="loading-wrapper"><ReactLoading className="loading" type="spin" color="#004AA1" /></div>}>
         <Router>
           <Sidebar
             sidebarOpen={sidebarOpen}

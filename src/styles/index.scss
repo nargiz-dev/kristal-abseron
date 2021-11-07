@@ -19,3 +19,15 @@ li {
   margin: 0;
   padding: 0;
 }
+.loading{
+  width:70px;
+  height:70px;
+
+}
+.loading-wrapper{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}

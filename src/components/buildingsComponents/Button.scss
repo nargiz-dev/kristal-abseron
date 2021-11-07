@@ -12,12 +12,14 @@
             color:$text-color;
 
         }
-        &:focus{
-            background-color: $primary-color;
-            cursor: pointer;
-            color:$text-color;
-        }
     }
     
+}
+.active-btn{
+    button{
+    background-color: $primary-color;
+    cursor: pointer;
+    color:$text-color;
+    }
 }
 

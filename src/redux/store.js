@@ -4,8 +4,7 @@ import { persistReducer, persistStore } from "redux-persist";
 import logger from "redux-logger";
 import storage from "redux-persist/lib/storage";
 import cardDataReducer from "./reducers/cardDataReducer";
-import chartDataReducer from './reducers/chartDataReducer'
-
+import chartDataReducer from './reducers/chartDataReducer';
 
 
 const persistConfig = {
@@ -14,7 +13,7 @@ const persistConfig = {
 };
 const reducer = combineReducers({
 	cardDataReducer,
-	chartDataReducer
+	chartDataReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

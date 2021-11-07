@@ -12,10 +12,11 @@ import "./BuildingRows.scss";
 function BuildingRows({ selected, isSeries }) {
   const Cards = useSelector((state) => state.cardDataReducer.data);
   const [showAccordion, setShowAccordion] = useState(false);
+  const url = 'http://localhost:8080/buildings';
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get("/data.json")
+      .get(url)
       .then((res) => dispatch(cardData(res.data)))
       .catch((err) => console.log(err));
   }, [dispatch]);

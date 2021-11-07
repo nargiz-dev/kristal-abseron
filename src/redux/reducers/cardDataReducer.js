@@ -1,4 +1,4 @@
-import { CARD_DATA } from "redux/actionTypes";
+import { CARD_DATA, ADD_BUILDING } from "redux/actionTypes";
 
 const initialState = {
   data: [],
@@ -11,6 +11,7 @@ const cardDataReducer = (state = initialState, action) => {
         ...state,
         data: action.data,
       };
+      
     default:
       return state;
   }
