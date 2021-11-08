@@ -31,7 +31,7 @@ function BuildingCard({
   return (
     <>
       <div
-        className={isOpen ? "active-card card-container" : "card-container"}
+        className={isOpen  ? "active-card card-container" : "card-container"}
         style={{height: isOpen && building.kateqoriya === "satilib" ? "200px" : ""}}
         onClick={() => (isOpen ? setWhichOpen(-1) : setWhichOpen(which))}
       >
@@ -41,7 +41,7 @@ function BuildingCard({
               ? "card"
               : "card-disabled card height-fixed"
           }
-          style={{ height: isOpen ? "135px" : "110px" }}
+          style={{ height: isOpen  ? "135px" : "110px" }}
         >
           <div className="different-color">
             <div
